@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz</title>
+</head>
+<body>
+    <script>
+        let num = window.prompt("Enter a number between 1 & 100");
+        
+        if( num >= 1 && num <= 100){
+            if (num % 5 ===0 && num % 3 === 0){
+                alert("FizzBuzz")
+            } else if (num % 3 === 0){
+                alert("Fizz")
+            } else if (num % 5 === 0){
+                alert("Buzz")
+            } else {
+                alert("Number is " + num)
+            }
+
+        } else if (isNaN(num)){
+            alert("You are passing in gobbledygook!")
+           
+
+        } else {
+            alert("Enter a number between 1 & 100!")
+        }
+ 
+    </script>
+    
+</body>
+</html>

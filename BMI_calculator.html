@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+</head>
+<body><h2>BMI Calculator</h2>
+
+
+    <script>
+        let myWeight = 65;
+        let myHeight = 1.65;
+        let bmi = myWeight/(myHeight*myHeight);
+
+        console.log("My BMI is " + bmi.toFixed(2));
+
+        if (bmi >=30 && bmi <=40){
+            console.log(`Your BMI is ${bmi.toFixed(2)}. You are in obese range.`)
+
+        } else if (bmi >=25 && bmi <=29.9){
+            console.log(`Your BMI is ${bmi.toFixed(2)}. You are in the overweight range.`)
+
+        } else if (bmi >=18.5 && bmi <=24.9){
+            console.log(`Your BMI is ${bmi.toFixed(2)}. You are in the healthy weight range.`)
+
+        }    else {
+            console.log(`Your BMI is ${bmi.toFixed(2)}. You are underweight.`)
+
+        }
+    </script>
+</body>
+</html>

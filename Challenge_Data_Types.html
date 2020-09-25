@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //Strings
+        console.log("Strings")
+        let text1 = "Hello"
+        let text2 = " World"
+        console.log(text1 + text2) // Expected output => "Hello World"
+
+        let longString = "This is a long string"
+
+        console.log(longString.length) // Expected output => 21
+
+        let text = "Hello "
+
+        console.log(text.repeat(5)) // Expected output => "Hello Hello Hello Hello Hello "
+
+        const name = "Liren"
+
+        console.log("Hello, my name is " + name + "!") // Expected output => "Hello, my name is Liren!"
+
+        let text4 = "Goodbye World!"
+
+        console.log(text4) // Expected output => "Goodbye World!"
+
+
+        //Numbers
+        console.log("Numbers")
+        let a = 1
+
+        console.log(a + a) // Expected output => 2
+
+        console.log(a - 100) // Expected output => -99
+
+        let x = 100
+        let y = 100
+        let z = 0.5
+        console.log(x / y) // Expected output => 1
+
+        console.log(x * z) // Expected output => 50
+
+        let num = 2
+        let num2 = 3
+        let num3 = 7
+        console.log(num ** num2) // Expected output => 8
+
+       console.log(num3 % num) // Expected output => 1
+
+        //Boolean
+        console.log("Boolean")
+        let bool = true
+
+        console.log(!bool)
+
+        //Array
+        console.log("Array")
+        let arr = [1,2,3,4,5,6,7,8]
+
+        console.log(arr.length) // Expected output => 8
+
+        let arr1 = [9,8,7,5,3,2,264,58,56]
+
+        console.log(arr1[6]) // Expected output => 264
+
+        let numToFind = 54
+        let arr3 = [7,2,3,6,48,54,425,37,456,245]
+
+        console.log(arr3.indexOf(numToFind)) // Expected output => 5
+
+        let numArr = [9,1,5,6,7,4,3,2,8]
+        // Some code here
+        numArr.sort();
+        console.log(numArr) // Expected output => [1,2,3,4,5,6,7,8,9]
+        
+        let arr4 = [1,2]
+        // Some code here
+        arr4.splice(1,1);
+        console.log(arr4) // Expected output => [1]
+
+        let arr5 = [1,2]
+        // Some code here
+        arr5.splice(0,1)
+        console.log(arr5) // Expected output => [2]
+
+        let arr6 = [1,2]
+        // Some code here
+        arr6.push(3)
+        console.log(arr6) // Expected output => [1,2,3]
+
+        let arr7 = ["Hello", "World"]
+        arr7.reverse();
+        console.log(arr7) // Expected output => ["World", "Hello"]
+
+        let stringX = "Hello"
+        let x1 = stringX[1]
+        console.log(x1) // Expected output => "e"
+
+        //Objects
+        console.log("Objects")
+        let human = {
+            name: "Liren"
+        }
+        // Code goes here
+        human.age=18
+        console.log(human) // Expected output => {name: "Liren", age: 18}
+
+    </script>
+</body>
+</html>

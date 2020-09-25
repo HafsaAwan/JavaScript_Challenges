@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roman Numerals Challenge</title>
+</head>
+<body>
+    <script>
+        const romanNumerals = ["I","IV","V", "IX", "X", "XL","L","XC","C","CD","D","CM","M"];
+
+        const values = [1,4,5,9,10,40,50,90,100,400,500,900,1000]
+        
+        let result ="";
+        let userInput = window.prompt("Please enter a whole number:")
+        let x=userInput;
+        
+        
+        if (!Number.isInteger(parseInt(userInput))){
+            alert("Sad... that was not a whole number. Try again later.")
+        
+        } else{
+
+            while(x > 0){
+                for(let i=values.length-1; i>=0; i--){
+
+                    while(x >= values[i]){
+                        x -= values[i]
+                        result += romanNumerals[i]
+                    }
+                    
+                }
+            }
+        }
+
+        alert(`Roman Numeral rquivalent of ${userInput} is : ${result} `)
+
+
+    </script>
+    
+</body>
+</html>

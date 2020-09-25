@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+</head>
+<body>
+
+    <script>
+        function getFinalPrice(price, taxPercent) {
+            if(taxPercent===0){
+                return price
+
+            } else if (taxPercent < 0){
+                console.log("Please provide a valid number of tax percentage")
+            
+            } else {
+                return price + price*(taxPercent/100)
+            } 
+
+            
+        }
+
+        const result1 = getFinalPrice(50, 6)
+        console.log(result1) // should print out 53
+
+        const result2 = getFinalPrice(25, 10)
+        console.log(result2) // should print out 27.50
+
+        console.log(getFinalPrice(50, 0)) //should return 50
+
+        console.log(getFinalPrice(50, -5))
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ElusiveButton</title>
+</head>
+
+<body>
+  <style>
+    #elusiveButton {
+      height:100px;
+      width: 100px;
+      border-radius: 50%;
+      position: fixed;
+      transition: all .2s;
+    }
+  </style>
+  <h1>Counter : <span>0</span></h1>
+  <button id="elusiveButton">Click Me</button>
+
+  <script>
+    let counter = 0;
+    const button = document.querySelector("#elusiveButton")
+    const counterEl = document.querySelector("h1 span")
+
+    button.addEventListener("mouseover", () => {
+      if(counter < 10){
+        counter ++
+        counterEl.innerText = counter
+        let buttonHeight =  (Math.floor(Math.random() * window.innerHeight ) - 100)
+        let buttonWidth = (Math.floor(Math.random() * window.innerWidth).toString() - 100)
+
+        if (buttonHeight < 0 ){
+          buttonHeight = 0
+        }
+
+        if (buttonWidth < 0){
+          buttonWidth = 0
+        }
+
+        button.style.top =  buttonHeight + "px"
+        button.style.left = buttonWidth  + "px"
+
+        button.style.backgroundColor = `rgb(${Math.floor(Math.random()* 255)},${Math.floor(Math.random()* 255)},${Math.floor(Math.random()* 255)})`
+      }
+    })
+
+    button.addEventListener("click", () => {
+      document.body.innerHTML = ""
+      const img = document.createElement("img")
+      img.src = "https://upload.wikimedia.org/wikipedia/commons/6/67/User_Avatar.png"
+      document.body.appendChild(img)
+    })
+
+  </script>
+</body>
+
+</html>

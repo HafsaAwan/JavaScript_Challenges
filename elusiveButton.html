@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elusive Button</title>
+    <style>
+        button{
+            border-radius: 50%;
+            height: 90px;
+            width: 90px;
+            font-size: 1em;
+            background-color: t;
+            font-weight: bold;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>You have missed <span id="counter">0 times!</span></h2>
+
+        <button id="elusiveButton">Click Me</button>
+    </div>
+    
+
+    <img id="image" src="" />
+
+    <script>
+        const myButton = document.getElementById("elusiveButton");
+        let times = 1;
+        colors = ["blue", "aqua", "lightgreen", "teal", "tomato", "yellow", "green", "orange"]
+        
+        myButton.addEventListener("mouseover", function(){
+            document.getElementById("counter").innerText = times + " times!";
+            
+            if(times < 11){
+                myButton.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                let height = Math.floor(Math.random()* (window.innerHeight - 100));
+                let width = Math.floor(Math.random()* (window.innerWidth - 60));
+                myButton.style.right = width + 'px';
+                myButton.style.top = height + 'px';
+                times++;    
+            
+            } else {
+                //document.getElementById("counter").innerText = times + " times!";
+                document.getElementById("counter").innerText = times-1 + " times! ~ ~ Okay I'll stop moving. Click me Now!";
+            }
+            
+        })    
+
+        myButton.addEventListener("click", function(){
+            document.querySelector("div").innerHTML ="";
+            document.getElementById("image").src = "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTTsGpVvTDZy_7valRoMUHplEfXfMebuQv-aw&usqp=CAU";
+
+        })
+        
+    </script>
+    
+</body>
+</html>
